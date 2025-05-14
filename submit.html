@@ -14,15 +14,40 @@
       <a href="index.html">Home</a>
       <a href="submit.html">Submit a Product</a>
       <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
     </nav>
   </header>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="creator-name" placeholder="Your Name" required>
-    <input type="email" name="creator-email" placeholder="Your Email" required>
-    <input type="text" name="product-name" placeholder="Product Name" required>
-    <textarea name="product-description" placeholder="Short Description" required></textarea>
-    <input type="url" name="purchase-link" placeholder="Link to Purchase or Contact Email" required>
-    <button type="submit">Submit for Review</button>
-  </form>
+<form action="https://formspree.io/f/myzwblqo" method="POST" enctype="multipart/form-data">
+  <input type="text" name="creator-name" placeholder="Your Name" required>
+  <input type="email" name="creator-email" placeholder="Your Email" required>
+  <input type="text" name="product-name" placeholder="Product Name" required>
+  <textarea name="product-description" placeholder="Short Description" required></textarea>
+  <input type="url" name="purchase-link" placeholder="Link to Purchase or Contact Email" required>
+
+  <!-- PNG upload (optional) -->
+  <!-- <input type="file" name="product-image" accept="image/png"> -->
+
+<div style="background: #f9f9f9; padding: 1rem; border: 1px solid #ccc; margin-top: 1rem; border-radius: 5px; font-size: 0.95rem;">
+  <strong>Creator Agreement Summary:</strong>
+  <p>By submitting this form, you agree that:
+    <ul style="margin-left: 1rem;">
+      <li>You are the original creator or have rights to the content submitted.</li>
+      <li>You allow Voyager Merch Collective to display your submission publicly.</li>
+      <li>You will not use any Semester at Sea® trademarks or copyrighted content.</li>
+      <li>You agree to share a small percentage of profit (as defined in the full agreement emailed after submission).</li>
+    </ul>
+    A full legal agreement will be emailed to you for signature.
+  </p>
+  <label>
+    <input type="checkbox" name="agree-to-terms" required>
+    I have read and agree to the Creator Submission Terms and profit-sharing agreement.
+  </label>
+</div>
+
+
+  <button type="submit">Submit for Review</button>
+</form>
+
 </body>
 </html>

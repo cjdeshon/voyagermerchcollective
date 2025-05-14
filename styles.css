@@ -94,6 +94,12 @@ input, textarea, button {
   border-radius: 4px;
 }
 
+input[type="file"] {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
 button {
   background-color: #004f6e;
   color: white;
@@ -106,6 +112,7 @@ button:hover {
   background-color: #006b94;
   transform: scale(1.03);
 }
+
 
 @media (max-width: 600px) {
   .product {
