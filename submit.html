@@ -8,14 +8,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Submit Your Product</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="submit.html">Submit a Product</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+ <header>
+  <div class="header-cta">
+    <a href="submit.html" class="idea-button">I Got an Idea!!!</a>
+  </div>
+  <h1>Submit Your Product</h1>
+  <div class="header-support">
+    <a href="#products" class="support-button">Support the Artists</a>
+  </div>
+</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="submit.html">Submit a Product</a>
+    <a href="about.html">About</a>
+  </nav>
+
 <form action="https://formspree.io/f/myzwblqo" method="POST" enctype="multipart/form-data">
   <input type="text" name="creator-name" placeholder="Your Name" required>
   <input type="email" name="creator-email" placeholder="Your Email" required>
