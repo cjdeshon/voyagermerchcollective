@@ -61,6 +61,13 @@ header p {
   display: inline-block;
 }
 
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  color: #f0f0f0;
+}
+
 .idea-button:hover {
   background-color: #006b94; /* lighter blue on hover */
   transform: scale(1.05);
