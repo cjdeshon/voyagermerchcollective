@@ -17,20 +17,20 @@
     <h2>World Language Flag</h2>
 
     <div id="main-image-container">
-        <img id="flagImage" src="images/HelloFlag-pink-1.png" alt="Flag">
+        <img id="flagImage" src="images/HelloFlag-green-1.png" alt="Flag">
     </div>
 
     <div class="image-gallery" id="thumbnailGallery">
-        <img src="images/HelloFlag-pink-1.png" onclick="setImage(0)">
-        <img src="images/HelloFlag-pink-2.png" onclick="setImage(1)">
-        <img src="images/HelloFlag-pink-3.png" onclick="setImage(2)">
-        <img src="images/HelloFlag-pink-4.png" onclick="setImage(3)">
+        <img src="images/HelloFlag-green-1.png" onclick="setImage(0)">
+        <img src="images/HelloFlag-green-2.png" onclick="setImage(1)">
+        <img src="images/HelloFlag-green-3.png" onclick="setImage(2)">
+        <img src="images/HelloFlag-green-4.png" onclick="setImage(3)">
     </div>
 
     <div class="color-options">
-        <button class="blue" onclick="changeColor('blue')" aria-label="Blue">Clear Sea</button>
         <button class="green" onclick="changeColor('green')" aria-label="Green">Safari</button>
-        <button class="red" onclick="changeColor('red')" aria-label="Red">Red Sea</button>
+         <button class="red" onclick="changeColor('red')" aria-label="Red">Red Sea</button>
+        <button class="blue" onclick="changeColor('blue')" aria-label="Blue">Clear Sea</button>
         <button class="pink" onclick="changeColor('pink')" aria-label="Pink">Dr. Suess</button>
     </div>
 
@@ -79,7 +79,7 @@
 
     <!-- JS to swap image -->
   <script>
-    let currentColor = 'pink';
+    let currentColor = 'green';
     let currentIndex = 0;
 
     const flagImage = document.getElementById('flagImage');
