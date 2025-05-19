@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Language Flag - Voyager Merch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="submit.html">Submit a Product</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <section class="product-detail" style="padding: 2rem; max-width: 800px; margin: auto;">
+    <h2>World Language Flag</h2>
+
+    <div id="main-image-container">
+        <img id="flagImage" src="images/HelloFlag-pink-1.png" alt="Flag">
+    </div>
+
+    <div class="image-gallery" id="thumbnailGallery">
+        <img src="images/HelloFlag-pink-1.png" onclick="setImage(0)">
+        <img src="images/HelloFlag-pink-2.png" onclick="setImage(1)">
+        <img src="images/HelloFlag-pink-3.png" onclick="setImage(2)">
+        <img src="images/HelloFlag-pink-4.png" onclick="setImage(3)">
+    </div>
+
+    <div class="color-options">
+        <button class="blue" onclick="changeColor('blue')" aria-label="Blue">Clear Sea</button>
+        <button class="green" onclick="changeColor('green')" aria-label="Green">Safari</button>
+        <button class="red" onclick="changeColor('red')" aria-label="Red">Red Sea</button>
+        <button class="pink" onclick="changeColor('pink')" aria-label="Pink">Dr. Suess</button>
+    </div>
+
+    <p style="margin-top: 1rem;">
+        Learn to say hello in countries you've traveled to. This banner features greetings in 11 languages!
+    </p>
+
+    <form action="https://formspree.io/f/myzwvwvp" method="POST" class="product-contact-form">
+        <input type="hidden" name="_subject" value="Voyager Merch Product Inquiry">
+
+        <label>
+            Product Wanted:
+            <input type="text" name="product" value="World Language Flag - [color], [Flag,Banner,Sticker]" required>
+        </label>
+
+        <label>
+            Your Name:
+            <input type="text" name="name" required>
+        </label>
+
+        <label>
+            Email Address:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
+            Shipping Address:
+            <textarea name="shipping" rows="3" required></textarea>
+        </label>
+
+        <label>
+            Preferred Payment Method:
+            <select name="payment" required>
+            <option value="">Choose one</option>
+            <option value="Venmo">Venmo</option>
+            <option value="CashApp">CashApp</option>
+            <option value="Zelle">Zelle</option>
+            <option value="PayPal">PayPal</option>
+            </select>
+        </label>
+
+        <button type="submit">Send Request</button>
+    </form>
+
+  </section>
+
+    <!-- JS to swap image -->
+  <script>
+    let currentColor = 'pink';
+    let currentIndex = 0;
+
+    const flagImage = document.getElementById('flagImage');
+    const thumbnailGallery = document.getElementById('thumbnailGallery');
+
+    function changeColor(color) {
+        currentColor = color;
+        currentIndex = 0;
+        updateImages();
+    }
+
+    function setImage(index) {
+        currentIndex = index;
+        flagImage.src = `images/HelloFlag-${currentColor}-${index + 1}.png`;
+    }
+
+    function updateImages() {
+        // Update main image
+        flagImage.src = `images/HelloFlag-${currentColor}-1.png`;
+
+        // Update thumbnails
+        thumbnailGallery.innerHTML = '';
+        for (let i = 1; i <= 4; i++) {
+        const thumb = document.createElement('img');
+        thumb.src = `images/HelloFlag-${currentColor}-${i}.png`;
+        thumb.onclick = () => setImage(i - 1);
+        thumbnailGallery.appendChild(thumb);
+        }
+    }
+
+    // Optional: zoom toggle
+    flagImage.addEventListener('click', () => {
+        flagImage.classList.toggle('zoom');
+    });
+
+    // Initialize
+    updateImages();
+  </script>
+</body>
+</html>

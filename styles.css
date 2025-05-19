@@ -179,6 +179,86 @@ nav a:hover {
   background: #005f88;
 }
 
+.product-detail img {
+  max-width: 100%;
+  cursor: zoom-in;
+}
+.zoom {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+.image-gallery {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.image-gallery img {
+  width: 80px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-options {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.color-options button {
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  border-radius: 4px; /* 👈 square corners */
+  border: 2px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.color-options button:hover {
+  border-color: #888;
+  transform: scale(1.05);
+}
+
+.color-options button.pink { background-color: pink; }
+.color-options button.blue { background-color: #3b82f6; }
+.color-options button.green { background-color: #10b981; }
+.color-options button.red { background-color: #ef4444; }
+
+.product-contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-contact-form input,
+.product-contact-form textarea,
+.product-contact-form select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.product-contact-form button {
+  background-color: #004f6e;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-contact-form button:hover {
+  background-color: #006b94;
+}
+
 form {
   padding: 2rem;
   max-width: 600px;
