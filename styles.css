@@ -241,7 +241,7 @@ a.product-link:hover {
 #flagImage {
   width: 100%;
   max-width: 500px;
-  height: 400px;
+  height: auto; /* <-- change this from 400px to auto */
   object-fit: contain;
   cursor: pointer;
   border: 1px solid #ccc;
@@ -447,10 +447,37 @@ footer p {
     font-size: 1.5rem;
   }
 
+  nav {
+  max-width: 100vw;
+  }
+
   .tagline {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
+
+  .product-detail-layout {
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.image-column,
+.info-column {
+  width: 100%;
+  min-width: auto;
+}
+
+.image-gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color-options button {
+  font-size: 0.9rem;
+  height: auto;
+  min-height: 40px;
+  padding: 0.5rem;
+}
 
   footer {
     font-size: 0.85rem;
