@@ -402,6 +402,12 @@ footer p {
   line-height: 1.5;
 }
 
+form, .product-contact-form {
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 @media (max-width: 600px) {
 .product {
     width: 100%;
@@ -495,6 +501,11 @@ footer p {
     margin: 1rem;
     width: 100%;
     box-sizing: border-box;
+  }
+
+    form, .product-contact-form {
+    padding: 1rem 0.5rem;
+    margin: 0.5rem;
   }
 
   #flagImage {
