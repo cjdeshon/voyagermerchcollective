@@ -13,7 +13,7 @@ body {
 
 header {
   position: relative;
-  background: url('images/world-flags.jpg');
+  background: url('images/world-flags.webp');
   background-size: cover;
   background-position: center;
   color: #fff;
